@@ -1,0 +1,22 @@
+galaxy_info:
+  role_name: f0rt
+  author: titocampis
+  description: Role to install and configure "fail2ban and firewalld in Debian (Ubuntu, Raspberry, Debian, etc.) and RedHat (AlmaLinux, Centos, etc.) hosts
+  license: MIT
+  min_ansible_version: "2.1"
+  platforms:
+    - name: Ubuntu
+      versions:
+        - focal
+        - jammy
+
+    - name: RaspberryPI
+      versions:
+        - modelB
+
+    - name: AlmaLinux
+      versions:
+        - Seafoam Ocelot
+
+  galaxy_tags:
+    - f0rt

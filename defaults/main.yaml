@@ -1,0 +1,2 @@
+# Firewalld Configuration
+f0rt_firewalld_http_enabled: false

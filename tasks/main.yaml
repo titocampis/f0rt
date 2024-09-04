@@ -1,0 +1,5 @@
+- name: Ensure firewalld installed and configured
+  ansible.builtin.import_tasks: firewalld.yaml
+  tags:
+    - f0rt
+    - f0rt_firewalld

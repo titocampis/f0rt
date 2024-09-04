@@ -1,0 +1,4 @@
+skip_list:
+    - schema[meta]
+    - meta-no-tags
+    - no-changed-when
