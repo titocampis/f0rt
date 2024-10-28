@@ -27,9 +27,9 @@
 - name: Firewalld | Add ssh_port to firewalld config
   ansible.posix.firewalld:
     port: "{{ ansible_port }}/tcp"
+    state: enabled
     immediate: true
     permanent: true
-    state: enabled
   when: ansible_port != '22'
 
 - name: Firewalld | Add http service to firewalld config
