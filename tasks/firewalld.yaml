@@ -19,23 +19,23 @@
 - name: Firewalld | Remove ssh service when ssh_port != 22
   ansible.posix.firewalld:
     service: ssh
-    permanent: true
     state: disabled
-  notify: Reload firewalld
+    immediate: true
+    permanent: true
   when: ansible_port != '22'
 
 - name: Firewalld | Add ssh_port to firewalld config
   ansible.posix.firewalld:
     port: "{{ ansible_port }}/tcp"
+    immediate: true
     permanent: true
     state: enabled
-  notify: Reload firewalld
   when: ansible_port != '22'
 
 - name: Firewalld | Add http service to firewalld config
   ansible.posix.firewalld:
     service: https
-    permanent: true
     state: enabled
-  notify: Reload firewalld
+    immediate: true
+    permanent: true
   when: f0rt_firewalld_http_enabled
